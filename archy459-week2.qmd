@@ -16,5 +16,6 @@ lithic_data_clean <-
 lithic_data |> # 'then' cmd + shift + m
   mutate(length_m = parse_number(length_mm)) |>
   mutate(platform_mm = parse_number(platform_mm))
+
 ```
 
