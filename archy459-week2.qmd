@@ -1,0 +1,20 @@
+---
+title: "Lithic Data Cleaning and Exploration – ARCHY 459 Week 2"
+format: html
+---
+```{r}
+library(tidyverse)
+```
+```{r}
+library(tidyverse)
+
+# load our data
+lithic_data <- read_csv("lithics_raw.csv")
+
+# clean the data
+lithic_data_clean <-
+lithic_data |> # 'then' cmd + shift + m
+  mutate(length_m = parse_number(length_mm)) |>
+  mutate(platform_mm = parse_number(platform_mm))
+```
+
